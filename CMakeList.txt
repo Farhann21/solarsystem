@@ -1,0 +1,31 @@
+# Versi minimum CMake yang diperlukan
+cmake_minimum_required(VERSION 3.10)
+
+# Nama proyek
+project(MySolarSystem)
+
+# Versi bahasa C++
+set(CMAKE_CXX_STANDARD 11)
+
+# Mengumpulkan semua file sumber
+set(SOURCES
+    camera.cpp
+    main.cpp
+    moon.cpp
+    planet.cpp
+    solarsystem.cpp
+    tga.cpp
+)
+
+# Menambahkan file header ke proyek
+set(HEADERS
+    camera.h
+    globals.h
+    moon.h
+    planet.h
+    solarsystem.h
+    tga.h
+)
+
+# Membuat eksekutable dari file sumber
+add_executable(my_solar_system ${SOURCES} ${HEADERS})
